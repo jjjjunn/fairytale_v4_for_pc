@@ -6,12 +6,12 @@ import streamlit as st
 load_dotenv()  # .env 파일에서 환경변수 로드
 
 # jamendo API 키 가져오기
-jamendo_id = os.getenv('JAMENDO_CLIENT_ID')
-jamendo_api_key = os.getenv('JAMENDO_API_KEY')
+# jamendo_id = os.getenv('JAMENDO_CLIENT_ID')
+# jamendo_api_key = os.getenv('JAMENDO_API_KEY')
 
 # 1. 변수에 값 할당하기
-# jamendo_id = st.secrets["JAMENDO_ID"]["JAMENDO_CLIENT_ID"]
-# jamendo_api_key = st.secrets["JAMENDO_API"]["JAMENDO_API_KEY"]
+jamendo_id = st.secrets["JAMENDO_ID"]["JAMENDO_CLIENT_ID"]
+jamendo_api_key = st.secrets["JAMENDO_API"]["JAMENDO_API_KEY"]
 
 # 2. 값이 없으면 에러 처리
 if not jamendo_api_key:
