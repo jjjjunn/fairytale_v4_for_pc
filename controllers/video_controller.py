@@ -10,10 +10,10 @@ from langchain.chat_models import ChatOpenAI
 load_dotenv()  # .env 파일에서 환경변수 로드
 
 # GOOGLE API 키 가져오기
-google_api_key = os.getenv('GOOGLE_API_KEY')
+# google_api_key = os.getenv('GOOGLE_API_KEY')
 
-## 1. 변수에 값 할당하기
-# google_api_key = st.secrets["GOOGLE"]["GOOGLE_API_KEY"]
+# 1. 변수에 값 할당하기
+google_api_key = st.secrets["GOOGLE"]["GOOGLE_API_KEY"]
 
 ## 2. 값이 없으면 에러 처리
 # if not google_api_key:
