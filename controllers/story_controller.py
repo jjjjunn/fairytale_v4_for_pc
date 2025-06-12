@@ -19,10 +19,10 @@ import base64
 load_dotenv()  # .env 파일에서 환경변수 로드
 
 # OpenAI API 키 가져오기
-openai_api_key = os.getenv('OPENAI_API_KEY')
+#openai_api_key = os.getenv('OPENAI_API_KEY')
 
 # 1. 변수에 값 할당하기
-#openai_api_key = st.secrets["OpenAI"]["OPENAI_API_KEY"]
+openai_api_key = st.secrets["OpenAI"]["OPENAI_API_KEY"]
 
 # 2. 값이 없으면 에러 처리
 if not openai_api_key:
@@ -227,7 +227,8 @@ def generate_image_from_fairy_tale(fairy_tale_text):
         )
 
         headers = {
-            "Authorization": f"Bearer {os.getenv('STABILITY_API_KEY')}",
+            # "Authorization": f"Bearer {os.getenv('STABILITY_API_KEY')}",
+            "Authorization": f"Bearer {st.secrets['STABILITY_API_KEY']['STABILITY_API_KEY']}",
             "Accept": "image/*",
         }
 
